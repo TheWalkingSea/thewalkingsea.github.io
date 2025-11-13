@@ -37,8 +37,8 @@ export default function About() {
                     <div className="relative">
                         <div className="relative rounded-lg overflow-hidden border-2 border-blue-400/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
                             <img
-                                src="/images/star-wars-backdrop-3.png"
-                                alt="Star Wars backdrop"
+                                src="/images/flamethrower.jpg"
+                                alt="Picture of me holding a homemade flamethrower"
                                 className="w-full h-auto"
                             />
                         </div>

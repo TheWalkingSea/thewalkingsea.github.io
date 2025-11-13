@@ -173,6 +173,45 @@ body {
   }
 }
 
+/* Opening animation - Star Wars style */
+@keyframes star-wars-shrink {
+  0% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+  10% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.01) translateZ(-1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-to-site {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.star-wars-container {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.star-wars-shrink {
+  animation: star-wars-shrink 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transform-style: preserve-3d;
+}
+
+.animate-fade-to-site {
+  animation: fade-to-site 1s ease-out forwards;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 12px;
