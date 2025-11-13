@@ -13,16 +13,14 @@ export default function About() {
                     <div className="space-y-6">
                         <Card className="p-8 bg-black/40 border-blue-500/30 backdrop-blur-sm">
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                [Your bio paragraph goes here. Talk about your journey as a developer, your passions,
-                                what drives you to code, and what makes you unique. Share your story and let your
-                                personality shine through.]
+                                I am a Computer Engineering student at Georgia Tech with 5+ years of coding experience across 7 languages and over 55 completed projects. As the founder of EduVision Technologies, I’ve delivered scalable IT and cloud solutions that modernized private school operations, while my role as an Audio Engineer at the University of Florida has given me hands-on experience managing enterprise-scale systems. Skilled in Python, Java, C, C++, JavaScript, TypeScript, SQL, React, Fusion360, Tensorflow, and AWS, I bring both technical depth and leadership experience to every project. I am eager to apply my skills and passion for building impactful, reliable software through Software Engineering internships.
                             </p>
                         </Card>
 
                         <Card className="p-8 bg-black/40 border-blue-500/30 backdrop-blur-sm">
                             <h3 className="text-2xl font-bold text-blue-300 mb-4">Skills & Technologies</h3>
                             <div className="flex flex-wrap gap-3">
-                                {['React', 'TypeScript', 'Node.js', 'Python', 'Tailwind CSS', 'PostgreSQL'].map((skill) => (
+                                {["Python", "C", "C++", "Java", "SQL", "HTML", "CSS", "JavaScript", "TypeScript", "Linux", "Tensorflow", "Spring Boot", "React", "Tailwind", "JUnit", "Jest", "Amazon Web Services", "GitHub", "Docker", "Raspberry PI C/C++", "Wireshark", "AIPhone Support Tool", "UniFi Controller", "Grandstream PBX", "Figma", "Jupyter", "CAD", "Fusion360", "CI/CD", "GitHub Actions"].map((skill) => (
                                     <span
                                         key={skill}
                                         className="px-4 py-2 bg-blue-950/50 border border-blue-400/50 rounded-lg text-blue-200 hover:bg-blue-900/50 transition-all duration-300"
@@ -34,7 +32,7 @@ export default function About() {
                         </Card>
                     </div>
 
-                    <div className="relative">
+                    <div className="relative flex flex-col h-full">
                         <div className="relative rounded-lg overflow-hidden border-2 border-blue-400/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
                             <img
                                 src="/images/flamethrower.jpg"
@@ -42,6 +40,12 @@ export default function About() {
                                 className="w-full h-auto"
                             />
                         </div>
+                        <Card className="p-8 bg-black/40 border-blue-500/30 backdrop-blur-sm mt-auto">
+                            <h3 className="text-2xl font-bold text-blue-300 mb-4">Career Goals</h3>
+                            <p className="text-lg text-gray-300 leading-relaxed">
+                                I aim to leverage my passion for technology and problem-solving to create impactful software solutions that address real-world challenges. I aspire to innovate in fields like artificial intelligence, cybersecurity, and scalable web applications, while continuously learning and mastering emerging technologies. Beyond coding, I seek opportunities to lead projects, collaborate with diverse teams, and contribute to open-source and community-driven initiatives.
+                            </p>
+                        </Card>
                     </div>
                 </div>
             </div>

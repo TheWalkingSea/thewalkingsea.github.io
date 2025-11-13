@@ -11,10 +11,10 @@ export default function Hero() {
                         Austin
                     </h1>
                     <p className="text-3xl text-blue-300 drop-shadow-[0_0_10px_rgba(147,197,253,0.5)]">
-                        Full Stack Developer
+                        Computer Engineering
                     </p>
                     <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-                        Building the future, one line of code at a time
+                        Georgia Institute of Technology '26
                     </p>
                     <div className="flex gap-4 pt-4">
                         <button

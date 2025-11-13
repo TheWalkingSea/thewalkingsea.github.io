@@ -6,32 +6,64 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
     const projects = [
         {
-            title: 'Project Name 1',
-            description: 'Brief description of your project. What problem does it solve? What technologies did you use?',
-            technologies: ['React', 'TypeScript', 'Node.js'],
-            github: '#',
-            live: '#'
+            title: 'Wordle Solver',
+            description: 'The Wordle Solver is a high-performance C++ application that applies principles of information theory to efficiently analyze possible letter combinations, determine the optimal guesses for the popular word puzzle game Wordle, and provide users with actionable insights to maximize their probability of winning in minimal attempts, effectively transforming a casual game into a mathematically guided strategy session.',
+            technologies: ['C++', 'Information Theory'],
+            github: 'https://github.com/TheWalkingSea/wordle-solver'
+        },        
+        {
+            title: 'VibeEngine',
+            description: 'VibeEngine is an AI-powered platform that makes complex codebases readable and maintainable by mapping features, visualizing dependencies, and enabling seamless feature additions via prompts, integrating with GitHub, AWS serverless architecture, MongoDB, and a React dashboard to transform indecipherable projects into manageable, extensible systems.',
+            technologies: ['AWS', 'ExpressJS', 'React (Router)', "Tailwind", "TypeScript", "HTML/CSS", "MongoDB"],
+            github: 'https://github.com/TheWalkingSea/aiatl-3'
         },
         {
-            title: 'Project Name 2',
-            description: 'Brief description of your project. What problem does it solve? What technologies did you use?',
-            technologies: ['Python', 'FastAPI', 'PostgreSQL'],
-            github: '#',
-            live: '#'
+            title: 'Kindness Operation',
+            description: 'A containerized pipeline in Python, automating verification of submissions and generating Instagram posts using Pillow, reducing review time by 90% and handling up to 100+ daily messages.',
+            technologies: ['Python', "Docker"],
+            github: 'https://github.com/KindnessOperation/SmileProject'
         },
         {
-            title: 'Project Name 3',
-            description: 'Brief description of your project. What problem does it solve? What technologies did you use?',
-            technologies: ['Next.js', 'Tailwind', 'Prisma'],
-            github: '#',
-            live: '#'
+            title: 'ThreatMarker',
+            description: 'ThreatMarker is a sophisticated TypeScript project leveraging BabelJS for code transformation and Jest for testing, designed to deobfuscate web-based malware and trackers, reconstruct their execution paths, and improve named entity recognition for security analysts, offering a toolset that enhances the detection and mitigation of potentially harmful or privacy-invading code in web applications.',
+            technologies: ['TypeScript', 'BabelJS', 'Jest'],
+            github: 'https://github.com/TheWalkingSea/ThreatMarker'
         },
         {
-            title: 'Project Name 4',
-            description: 'Brief description of your project. What problem does it solve? What technologies did you use?',
-            technologies: ['Vue.js', 'Express', 'MongoDB'],
-            github: '#',
-            live: '#'
+            title: 'CanvList',
+            description: 'CanvList is a Python-based application that automatically organized and tracks student assignments on Canvas, and creates a customized wallpaper that is automatically set on your device.',
+            technologies: ['Python'],
+            github: 'https://github.com/TheWalkingSea/CanvList'
+        },
+        {
+            title: 'BuzzBoard',
+            description: 'Developed a full-stack React + Spring Boot dashboard integrating real-time coursework, dining balances, campus events, emails, server status, and weather data, reducing daily task-checking time by 95%.',
+            technologies: ['TypeScript', 'Java', 'Spring Boot', "React", "Vite", "HTML/CSS"],
+            github: 'https://github.com/TheWalkingSea/BuzzBoard'
+        },
+        {
+            title: 'Oscar Course Monitor',
+            description: 'Oscar Course Monitor is a Python-based tool that continuously monitors university course enrollment and automatically notifies users when a spot becomes available, allowing students to efficiently register for high-demand classes without constant manual checking.',
+            technologies: ['Python', "Reverse Engineering"],
+            github: 'https://github.com/TheWalkingSea/oscar-course-monitor'
+        },
+        {
+            title: 'Snake Game AI',
+            description: 'Snake Game AI is a Python project that leverages Prim’s algorithm alongside an enhanced Hamiltonian cycle to autonomously play the Snake game, optimizing every move for maximum efficiency and achieving the highest possible scores through algorithmic precision.',
+            technologies: ['Python'],
+            github: 'https://github.com/TheWalkingSea/snake-game-ai'
+        },
+        {
+            title: 'OpenAI Essay Fine Tuner',
+            description: 'OpenAI Essay Fine Tuner is a Python application that trains a personalized AI model on your own essays to generate new writing in your unique style, producing text that closely mirrors your voice and can bypass AI detection tools, making it a powerful tool for consistent, authentic essay writing.',
+            technologies: ['Python', "OpenAI"],
+            github: 'https://github.com/TheWalkingSea/openai-essay-fine-tune'
+        },
+        {
+            title: 'Focus Grade Monitor',
+            description: 'Focus Grade Monitor authenticates with Focus through SAML and employs reverse engineering techniques to track grade changes in real time, sending immediate alerts to users whenever updates occur, ensuring students are always informed about their academic performance.',
+            technologies: ['Python', "Reverse Engineering"],
+            github: 'https://github.com/TheWalkingSea/focus-grade-monitor'
         }
     ];
 
@@ -46,7 +78,7 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <Card
                             key={index}
-                            className="bg-black/60 border-blue-500/30 backdrop-blur-sm hover:border-blue-400/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] group"
+                            className="h-full bg-black/60 border-blue-500/30 backdrop-blur-sm hover:border-blue-400/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] group"
                         >
                             <CardHeader>
                                 <CardTitle className="text-2xl text-blue-300 group-hover:text-blue-200 transition-colors">
@@ -56,7 +88,7 @@ export default function Projects() {
                                     {project.description}
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent className="space-y-4">
+                            <CardContent className="flex flex-col gap-4 flex-1">
                                 <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech) => (
                                         <span
@@ -67,7 +99,7 @@ export default function Projects() {
                                         </span>
                                     ))}
                                 </div>
-                                <div className="flex gap-3 pt-2">
+                                <div className="flex gap-3 mt-auto">
                                     <Button
                                         variant="outline"
                                         size="sm"
@@ -76,15 +108,6 @@ export default function Projects() {
                                     >
                                         <Github className="w-4 h-4 mr-2" />
                                         Code
-                                    </Button>
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="border-blue-400/50 text-blue-300 hover:bg-blue-950/50 hover:text-blue-200"
-                                        onClick={() => window.open(project.live, '_blank')}
-                                    >
-                                        <ExternalLink className="w-4 h-4 mr-2" />
-                                        Live Demo
                                     </Button>
                                 </div>
                             </CardContent>

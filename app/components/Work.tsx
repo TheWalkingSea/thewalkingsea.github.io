@@ -4,42 +4,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 export default function Work() {
     const workExperience = [
         {
-            title: 'Senior Software Engineer',
-            company: 'Company Name',
-            period: '2023 - Present',
-            description: 'Add your job description here. Highlight key achievements, technologies used, and impact.',
+            title: 'Founder \& Chief Executive Officer',
+            company: 'EduVision Technologies',
+            period: 'March 2024 - Present',
             achievements: [
-                'Achievement or responsibility #1',
-                'Achievement or responsibility #2',
-                'Achievement or responsibility #3'
+                'Modernized 2 private school\'s IT infrastructure, deploying campus-wide Ubiquiti networks supporting 100+ devices.',
+                'Installed 1.5+ miles of Cat-6 cabling, 20+ 4K cameras, programmed 60+ iPads, and door access systems.',
+                'Implemented a VOIP AIPhone system integrated with PBX, and reduced client landline costs by $2,424 annually.',
+                'Saved $10K+ through strategic hardware and software sourcing while maintaining full system reliability.'
             ]
         },
         {
-            title: 'Software Engineer',
-            company: 'Previous Company',
-            period: '2021 - 2023',
-            description: 'Add your job description here. Highlight key achievements, technologies used, and impact.',
+            title: 'Audio Engineer',
+            company: 'Ultra Technologies',
+            period: 'September 2025 - Present',
             achievements: [
-                'Achievement or responsibility #1',
-                'Achievement or responsibility #2',
-                'Achievement or responsibility #3'
-            ]
-        },
-        {
-            title: 'Junior Developer',
-            company: 'First Company',
-            period: '2019 - 2021',
-            description: 'Add your job description here. Highlight key achievements, technologies used, and impact.',
-            achievements: [
-                'Achievement or responsibility #1',
-                'Achievement or responsibility #2',
-                'Achievement or responsibility #3'
+                'Engineered and operated live audio and network infrastructure for the University of Florida\'s football stadium, maintaining 100% uptime across 90,000-attendee events under national ESPN coverage.',
+                'Remediated critical vulnerabilities in the entire university’s DANTE audio, visual, and control systems (risk level 9/10), preventing unauthorized administrative access and protecting high-profile national broadcasts.',
+                'Built a React + Python audio control platform hosted on AWS to automate the stadium’s public announcement systems, reducing manual interventions by 90% and enabling real-time control for 90,000-attendee events.'
             ]
         }
     ];
 
     return (
-        <section id="work" className="min-h-screen flex items-center py-20 bg-gradient-to-b from-black via-blue-950/10 to-black relative">
+        <section id="work" className="flex items-center py-20 bg-gradient-to-b from-black via-blue-950/10 to-black relative">
             <div className="absolute inset-0 bg-[url(/images/star-wars-backdrop.jpg)] bg-cover bg-center opacity-5"></div>
 
             <div className="container mx-auto px-6 max-w-6xl relative z-10">
@@ -67,7 +55,6 @@ export default function Work() {
                                 </div>
                             </CardHeader>
                             <CardContent className="space-y-4">
-                                <p className="text-gray-300">{job.description}</p>
                                 <ul className="space-y-2">
                                     {job.achievements.map((achievement, i) => (
                                         <li key={i} className="flex items-start gap-2 text-gray-300">
