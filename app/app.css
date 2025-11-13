@@ -1,11 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'starwars';
+  src: url('/fonts/star-wars/Starjedi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-starwars: 'starwars', 'Roboto';
 }
 
 html,
@@ -58,7 +68,7 @@ body {
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.147 0.004 49.25);
+  --foreground: oklch(100% 0.00011 271.152)
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.147 0.004 49.25);
   --popover: oklch(1 0 0);
@@ -131,4 +141,60 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Star Wars themed animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.8));
+  }
+}
+
+@keyframes star-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.6);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.6), rgba(37, 99, 235, 0.8));
+  border-radius: 6px;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 1));
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(59, 130, 246, 0.4);
+  color: #fff;
 }
