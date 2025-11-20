@@ -2,9 +2,19 @@ import '../app.css';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { ExternalLink, Github } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 export default function Projects() {
+    const navigate = useNavigate();
+
     const projects = [
+        {
+            title: 'Alexa Integrated LED Controller',
+            description: 'Developed an Alexa-integrated LED controller using AWS and the Alexa Skills Kit, enabling voice-activated control of a Raspberry Pi-driven lighting system.',
+            technologies: ["Amazon Web Services", "Python"],
+            github: "https://github.com/TheWalkingSea/custom-door-system",
+            redirect: "/alexa-led-controller"
+        },
         {
             title: 'Wordle Solver',
             description: 'The Wordle Solver is a high-performance C++ application that applies principles of information theory to efficiently analyze possible letter combinations, determine the optimal guesses for the popular word puzzle game Wordle, and provide users with actionable insights to maximize their probability of winning in minimal attempts, effectively transforming a casual game into a mathematically guided strategy session.',
@@ -78,8 +88,9 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <Card
                             key={index}
-                            className="h-full bg-black/60 border-blue-500/30 backdrop-blur-sm hover:border-blue-400/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] group"
+                            className="relative h-full bg-black/60 border-blue-500/30 backdrop-blur-sm hover:border-blue-400/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] group"
                         >
+                            {project.redirect && <a onClick={() => navigate(project.redirect)} className="absolute h-full w-full cursor-pointer">dsa</a>}
                             <CardHeader>
                                 <CardTitle className="text-2xl text-blue-300 group-hover:text-blue-200 transition-colors">
                                     {project.title}
