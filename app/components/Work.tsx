@@ -4,6 +4,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 export default function Work() {
     const workExperience = [
         {
+            title: 'Audio \& Software Engineer Intern',
+            company: 'Ultra Technologies',
+            period: 'September 2025 - Present',
+            achievements: [
+                'Engineered and operated live audio and network infrastructure for the University of Florida\'s football stadium, maintaining 100% uptime across 90,000-attendee events under national ESPN coverage.',
+                'Remediated critical vulnerabilities in the entire university’s DANTE audio, visual, and control systems (risk level 9/10), preventing unauthorized administrative access and protecting high-profile national broadcasts.',
+                'Built a React + Python audio control platform hosted on AWS to automate the stadium’s public announcement systems, reducing manual interventions by 90% and enabling real-time control for 90,000-attendee events.'
+            ]
+        },
+        {
             title: 'Founder \& Chief Executive Officer',
             company: 'EduVision Technologies',
             period: 'March 2024 - Present',
@@ -12,16 +22,6 @@ export default function Work() {
                 'Installed 1.5+ miles of Cat-6 cabling, 20+ 4K cameras, programmed 60+ iPads, and door access systems.',
                 'Implemented a VOIP AIPhone system integrated with PBX, and reduced client landline costs by $2,424 annually.',
                 'Saved $10K+ through strategic hardware and software sourcing while maintaining full system reliability.'
-            ]
-        },
-        {
-            title: 'Audio Engineer',
-            company: 'Ultra Technologies',
-            period: 'September 2025 - Present',
-            achievements: [
-                'Engineered and operated live audio and network infrastructure for the University of Florida\'s football stadium, maintaining 100% uptime across 90,000-attendee events under national ESPN coverage.',
-                'Remediated critical vulnerabilities in the entire university’s DANTE audio, visual, and control systems (risk level 9/10), preventing unauthorized administrative access and protecting high-profile national broadcasts.',
-                'Built a React + Python audio control platform hosted on AWS to automate the stadium’s public announcement systems, reducing manual interventions by 90% and enabling real-time control for 90,000-attendee events.'
             ]
         }
     ];
@@ -58,7 +58,7 @@ export default function Work() {
                                 <ul className="space-y-2">
                                     {job.achievements.map((achievement, i) => (
                                         <li key={i} className="flex items-start gap-2 text-gray-300">
-                                            <span className="text-blue-400 mt-1">▸</span>
+                                            <span className="text-blue-400">▸</span>
                                             <span>{achievement}</span>
                                         </li>
                                     ))}

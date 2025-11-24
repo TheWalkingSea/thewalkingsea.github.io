@@ -9,13 +9,6 @@ export default function Projects() {
 
     const projects = [
         {
-            title: 'Alexa Integrated LED Controller',
-            description: 'Developed an Alexa-integrated LED controller using AWS and the Alexa Skills Kit, enabling voice-activated control of a Raspberry Pi-driven lighting system.',
-            technologies: ["Amazon Web Services", "Python"],
-            github: "https://github.com/TheWalkingSea/custom-door-system",
-            redirect: "/alexa-led-controller"
-        },
-        {
             title: 'Wordle Solver',
             description: 'The Wordle Solver is a high-performance C++ application that applies principles of information theory to efficiently analyze possible letter combinations, determine the optimal guesses for the popular word puzzle game Wordle, and provide users with actionable insights to maximize their probability of winning in minimal attempts, effectively transforming a casual game into a mathematically guided strategy session.',
             technologies: ['C++', 'Information Theory'],

@@ -40,12 +40,6 @@ export default function About() {
                                 className="w-full h-auto"
                             />
                         </div>
-                        <Card className="p-8 bg-black/40 border-blue-500/30 backdrop-blur-sm mt-auto">
-                            <h3 className="text-2xl font-bold text-blue-300 mb-4">Career Goals</h3>
-                            <p className="text-lg text-gray-300 leading-relaxed">
-                                I aim to leverage my passion for technology and problem-solving to create impactful software solutions that address real-world challenges. I aspire to innovate in fields like artificial intelligence, cybersecurity, and scalable web applications, while continuously learning and mastering emerging technologies. Beyond coding, I seek opportunities to lead projects, collaborate with diverse teams, and contribute to open-source and community-driven initiatives.
-                            </p>
-                        </Card>
                     </div>
                 </div>
             </div>
