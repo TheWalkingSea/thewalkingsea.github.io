@@ -3,7 +3,7 @@ import '../app.css';
 export default function Hero() {
     return (
         <div className="relative min-h-screen flex items-center justify-center pt-20 bg-gradient-to-b from-black via-blue-950/20 to-black">
-            <div className="absolute inset-0 bg-[url(/images/star-wars-backdrop2.webp)] bg-cover bg-center opacity-30"></div>
+            <div className="absolute inset-0 bg-[url(/images/star-wars-backdrop2.webp)] bg-cover bg-center md:bg-left opacity-30"></div>
 
             <div className="relative z-10 container mx-auto px-6 flex items-center justify-between max-w-7xl flex-col-reverse md:flex-row">
                 <div className="flex-1 space-y-2 md:space-y-6 text-center md:text-left">

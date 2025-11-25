@@ -51,7 +51,7 @@ export default function Work() {
                                             {job.company}
                                         </CardDescription>
                                     </div>
-                                    <span className="text-amber-400 font-semibold">{job.period}</span>
+                                    <span className="text-amber-400 font-semibold text-right">{job.period}</span>
                                 </div>
                             </CardHeader>
                             <CardContent className="space-y-4">
