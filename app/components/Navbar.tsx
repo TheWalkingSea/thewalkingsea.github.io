@@ -13,7 +13,7 @@ export default function Navbar() {
                     Austin
                 </h1>
 
-                <div className="ml-auto flex gap-5 hidden md:block">
+                <div className="ml-auto gap-5 hidden md:flex">
                     <a href="/resume.pdf"  target="_blank" className="text-lg border border-transparent cursor-pointer hover:border-blue-400/60 hover:bg-blue-950/70 hover:text-blue-300 py-2.5 px-6 rounded-xl transition-all duration-300">Resume</a>
                     <button
                         onClick={() => scrollToSection('about')}
